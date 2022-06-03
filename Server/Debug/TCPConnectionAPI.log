@@ -1,0 +1,18 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(491,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (TCPConnectionAPI.vcxproj).  Это может привести к ошибкам очистки и перестроения.
+  Admin.cpp
+  Client.cpp
+  Expert.cpp
+  Object.cpp
+D:\БГУИР\Милько\SerializableEntities\Object.cpp(76,10): warning C4244: =: преобразование "const double" в "int", возможна потеря данных
+  User.cpp
+  ClientInfo.cpp
+  DatabaseContext.cpp
+D:\БГУИР\Милько\Server\DatabaseContext.cpp(147,62): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+  Main.cpp
+  Server.cpp
+D:\БГУИР\Милько\Server\Server.cpp(230,14): warning C4804: >: небезопасное использование типа "bool" в операции
+  Создание кода...
+D:\БГУИР\Милько\SerializableEntities\Object.cpp(81): warning C4172: возвращение адреса локальной или временной переменной
+  sqlite3.c
+     Создается библиотека D:\БГУИР\Милько\Client\Debug\Server.lib и объект D:\БГУИР\Милько\Client\Debug\Server.exp
+  TCPConnectionAPI.vcxproj -> D:\БГУИР\Милько\Client\Debug\Server.exe
