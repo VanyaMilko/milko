@@ -7,3 +7,4 @@ C:\Users\Алексей Лебедев\source\repos\бИЧУРИН курсач 
 D:\MyProjects\C++\Курсачи 2.2\Милько\Client\Debug\Client.exe
 D:\БГУИР\Милько\Client\Debug\Client.exe
 D:\БГУИР\Милько\Client\Debug\Client.pdb
+C:\Users\User\source\repos\milko\Client\Debug\Client.exe
