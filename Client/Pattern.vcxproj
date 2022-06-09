@@ -240,6 +240,8 @@
     <ResourceCompile Include="Pattern.rc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="res\Pattern.rc2" />
   </ItemGroup>

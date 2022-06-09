@@ -328,28 +328,15 @@ void CMenuDlg::OnBnClickedFilter()
 	m_wndEdit2To.GetWindowText(str);
 	dMaxWeight = (str.GetLength() ? _wtof(str) : -1.0);
 
-	m_wndEditMarkFrom.GetWindowText(str);
-	dMinMark = (str.GetLength() ? _wtof(str) : -1.0);
-
-	m_wndEditMarkTo.GetWindowText(str);
-	dMaxMark = (str.GetLength() ? _wtof(str) : -1.0);
 
 	UpdatePage();
 }
 
 void CMenuDlg::OnBnClickedReport()
 {
-	int nRated = 0;
-	for (auto iter : m_Dishes)
-	{
-		if (iter.GetMark() != 0)nRated++;
-	}
-
 	CStdioFile  fl;
 	fl.Open(L"Отчет.txt", CFile::modeCreate | CFile::modeWrite);
 	CString str = L"Количетво записей: " + IntToStr(m_Dishes.size()) + L"\n";
-	fl.WriteString(str);
-	str = L"Количетво оцененных записей: " + IntToStr(nRated) + L"\n";
 	fl.WriteString(str);
 	for (auto iter : m_Dishes)
 	{
@@ -360,8 +347,6 @@ void CMenuDlg::OnBnClickedReport()
 		str = L"Стоимость: " + IntToStr(iter.GetCost()) + L" руб.\n";
 		fl.WriteString(str);
 		str = L"Мощность: " + DoubleToStr(iter.GetPower()) + L"л.с.\n";
-		fl.WriteString(str);
-		str = L"Оценка экспертов: " + DoubleToStr(iter.GetMark()) + L"\n";
 		fl.WriteString(str);
 	}
 	MessageBox(L"Отчет сохранен в локальной папке под названием \"Отчет.txt\"");

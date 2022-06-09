@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CAddDlg" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAIAAAAgAAFAAAAAAAAASAQAAEMAUMAEAAAg=</HashCode>
+      <FileName>AddProduct.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAddUserDlg" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAASgAEAAAABAAgAABgAAAYAAAAAAAAAAAAEAAAAEAA=</HashCode>
+      <FileName>AddUser.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAuthorizationDlg" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAEAAABCAAgAABAABAAgAFAAAQAAAAAABAAAEAA=</HashCode>
+      <FileName>Authorization.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CExpertMethodDlg" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAEAAAABAIgAABAAAAAAAAASAAAgADABAAAAAAI=</HashCode>
+      <FileName>ExpertChoice.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CExpDlg" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AMsAEAFAAAAIAAgBLBMEAAAAAAIwAAAgEAAEAACAbQI=</HashCode>
+      <FileName>ExpertMethod.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMenuDlg" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAWIBEkCAAJIQIgAMFhwgBYAQIAUAA4AACBAGEAQBgI=</HashCode>
+      <FileName>Menu.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CRegistrationDlg" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAIEAgABIAAgAABAAAAAAAEAAAQAAAAAAQAAAEAA=</HashCode>
+      <FileName>Registration.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUserControlDlg" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABABAkACAAIAAgAADAAAAAEAAAQAAAAAAAAACAAAAM=</HashCode>
+      <FileName>UserControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CCourceWorkApp" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>CourceWorkApp.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Admin" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAQAAEAAAAAACAAIYACAAAAAAAAAAAAAgAAEoA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\Admin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BinaryFormatter" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAQAAAQAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\BinaryFormatter.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Client" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAQAAEAAAAAACAAIIAAAAAAAAAAAAAgAgAAEoQ=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\Client.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Expert" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAQAAEAAAABACABIIAAAAAAAAAAAAAAAgAAEoA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\Expert.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Car" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAQAKIAAAAAAIQAAEAEVAQEQAAAAQAIQhgA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\Object.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="User" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgABAAAQAAEAAAABACAAIIAAAAAAAAAAAAAAAgAAEoA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\User.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientConnectionModule" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACEEBAAAgACAAAAAQACAABAAQQKSAAIQIIAAAAAA=</HashCode>
+      <FileName>ClientConnectionModule.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientProtocol" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAgAAAQCBBAAACBAAYQAAKACAAQgIgCAAg=</HashCode>
+      <FileName>ClientProtocol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="CommandToServer" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAETAgAICAAAAMAAAAABAAAAQQAAAAAEUQBAAAAYHA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\CommandsBetweenServerAndClient.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AnswerFromServer" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABIAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\CommandsBetweenServerAndClient.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="TypeOfUser" Collapsed="true">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEgAAAAAAAAAAAAAQAAAAAAAEAAQAA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\CommandsBetweenServerAndClient.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ServiceCommands" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>C:\Users\User\source\repos\milko\SerializableEntities\CommandsBetweenServerAndClient.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
