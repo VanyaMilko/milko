@@ -19,7 +19,6 @@
 #define INDEX_TYPE    1
 #define INDEX_COST    2
 #define INDEX_WEIGHT  3
-#define INDEX_MARK    4
 
 #define ID_START 6666
 
@@ -31,8 +30,6 @@ CMenuDlg::CMenuDlg(CWnd* pParent /*=nullptr*/)
 
 	nMinCost = -1;
 	nMaxCost = -1;
-	dMinMark = -1.0;
-	dMaxMark = -1.0;
 	dMinWeight = -1.0;
 	dMaxWeight = -1.0;
 }
@@ -54,8 +51,6 @@ void CMenuDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_EDIT_1_TO, m_wndEdit1To);
 	DDX_Control(pDX, IDC_EDIT_2_FROM, m_wndEdit2From);
 	DDX_Control(pDX, IDC_EDIT_2_TO, m_wndEdit2To);
-	DDX_Control(pDX, IDC_EDIT_MARK_FROM, m_wndEditMarkFrom);
-	DDX_Control(pDX, IDC_EDIT_MARK_TO, m_wndEditMarkTo);
 	DDX_Control(pDX, IDC_EDIT_SEARCH_NAME, m_wndEditFilterName);
 	DDX_Control(pDX, IDC_EDIT_SEARCH_TYPE, m_wndEditFilterType);
 	DDX_Control(pDX, IDC_BUTTON_REPORT, m_wndBtnReport);
@@ -95,9 +90,6 @@ void CMenuDlg::UpdatePage()
 		if (nMinCost != -1) bShow &= iter.GetCost() >= nMinCost;
 		if (nMaxCost != -1) bShow &= iter.GetCost() <= nMaxCost;
 
-		if (dMinMark != -1.0) bShow &= iter.GetMark() >= dMinMark;
-		if (dMaxMark != -1.0) bShow &= iter.GetMark() <= dMaxMark;
-
 		if (dMinWeight != -1.0) bShow &= iter.GetPower() >= dMinWeight;
 		if (dMaxWeight != -1.0) bShow &= iter.GetPower() <= dMaxWeight;
 
@@ -125,7 +117,6 @@ BOOL CMenuDlg::OnInitDialog()
 	m_wndReportCtrl.InsertColumn(INDEX_TYPE, L"Тип", 0, 150);
 	m_wndReportCtrl.InsertColumn(INDEX_COST, L"Стоимость, руб.", 0, 80);
 	m_wndReportCtrl.InsertColumn(INDEX_WEIGHT, L"Мощность, л.с.", 0, 150);
-	m_wndReportCtrl.InsertColumn(INDEX_MARK, L"Оценка", 0, 56);
 
 	PostMessage(ID_START);
 	return TRUE;
@@ -173,18 +164,8 @@ void CMenuDlg::OnBtnUserClck()
 void CMenuDlg::OnBtnExpertClck()
 {
 	std::vector<Car> dishes;
-	CExpertMethodDlg dlg(m_pModule, dishes);
-	dlg.DoModal();
-
-	if (dishes.size() == 5)
-	{
-		CExpDlg dlgExp(dishes);
-		dlgExp.DoModal();
-		for (auto i : dishes)
-		{
-			m_pModule->editOneObj(i);
-		}
-	}
+	CExpDlg dlgExp(dishes);
+	dlgExp.DoModal();
 }
 
 void CMenuDlg::OnBtnExitClck()
@@ -263,7 +244,6 @@ void CMenuDlg::OnBnClickedEdit()
 	obj.SetType(WtoA(m_wndReportCtrl.GetItemText(index, INDEX_TYPE)));
 	obj.SetCost(_wtof(m_wndReportCtrl.GetItemText(index, INDEX_COST)));
 	obj.SetPower(_wtof(m_wndReportCtrl.GetItemText(index, INDEX_WEIGHT)));
-	obj.SetMark(_wtof(m_wndReportCtrl.GetItemText(index, INDEX_MARK)));
 
 	for (auto iter : m_Dishes)
 	{
@@ -304,7 +284,6 @@ void CMenuDlg::OnBnClickedDel()
 	obj.SetType(WtoA(m_wndReportCtrl.GetItemText(index, INDEX_TYPE)));
 	obj.SetCost(_wtof(m_wndReportCtrl.GetItemText(index, INDEX_COST)));
 	obj.SetPower(_wtof(m_wndReportCtrl.GetItemText(index, INDEX_WEIGHT)));
-	obj.SetMark(_wtof(m_wndReportCtrl.GetItemText(index, INDEX_MARK)));
 
 	for (auto iter : m_Dishes)
 	{
@@ -399,7 +378,6 @@ void CMenuDlg::AddToReport(Car& obj)
 	strFormat.Format(L"%0.2lf", obj.GetPower());
 	m_wndReportCtrl.SetItemText(index, INDEX_WEIGHT, strFormat);
 	strFormat.Format(L"%0.2lf", obj.GetMark());
-	m_wndReportCtrl.SetItemText(index, INDEX_MARK, strFormat);
 }
 
 

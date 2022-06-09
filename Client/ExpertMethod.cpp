@@ -26,11 +26,18 @@ CExpDlg::~CExpDlg()
 BOOL CExpDlg::OnInitDialog()
 {
 	CDialogEx::OnInitDialog();
-	static1.SetWindowText(AtoW(vect[0].GetName()));
-	static2.SetWindowText(AtoW(vect[1].GetName()));
-	static3.SetWindowText(AtoW(vect[2].GetName()));
-	static4.SetWindowText(AtoW(vect[3].GetName()));
-	static5.SetWindowText(AtoW(vect[4].GetName()));
+
+	strings.push_back(L"Расширить асортимент выпускаемых авто");
+	strings.push_back(L"Увеличить импорт авто за границу");
+	strings.push_back(L"Увеличить объем выпуска на локальный рынок");
+	strings.push_back(L"Создать коллаборацию с известным производителем");
+	strings.push_back(L"Добавить линию производства мотоциклов");
+
+	/*static1.SetWindowText(AtoW(strings[0]));
+	static2.SetWindowText(AtoW(strings[1]));
+	static3.SetWindowText(AtoW(strings[2]));
+	static4.SetWindowText(AtoW(strings[3]));
+	static5.SetWindowText(AtoW(strings[4]));*/
 
 	static1k.SetWindowText(L"");
 	static1r.SetWindowText(L"");
@@ -179,11 +186,6 @@ void CExpDlg::OnBnClickedOk()
 	k4 *= dWeight;
 	k5 *= dWeight;
 
-	vect[0].SetMark(k1);
-	vect[1].SetMark(k2);
-	vect[2].SetMark(k3);
-	vect[3].SetMark(k4);
-	vect[4].SetMark(k5);
 
 	static1k.SetWindowText(DoubleToStr(k1));
 	static2k.SetWindowText(DoubleToStr(k2));
@@ -202,36 +204,36 @@ void CExpDlg::OnBnClickedOk()
 	if (k1 == max)
 	{
 		static1r.SetWindowText(L"Лучший результат");
-		winner += AtoW(vect[0].GetName());
+		winner += (strings[0]);
 	}
 	if (k2 == max)
 	{
 		static2r.SetWindowText(L"Лучший результат");
 		if (!winner.IsEmpty())winner += L", ";
-		winner += AtoW(vect[1].GetName());
+		winner += (strings[1]);
 	}
 	if (k3 == max)
 	{
 		static3r.SetWindowText(L"Лучший результат");
 		if (!winner.IsEmpty())winner += L", ";
-		winner += AtoW(vect[2].GetName());
+		winner += (strings[2]);
 	}
 	if (k4 == max)
 	{
 		static4r.SetWindowText(L"Лучший результат");
 		if (!winner.IsEmpty())winner += L", ";
-		winner += AtoW(vect[3].GetName());
+		winner += (strings[3]);
 	}
 	if (k5 == max)
 	{
 		static5r.SetWindowText(L"Лучший результат");
 		if (!winner.IsEmpty())winner += L", ";
-		winner += AtoW(vect[4].GetName());
+		winner += (strings[4]);
 	}
 
 	CString strFormat;
 	strFormat.Format(L"Результат:\n%s = %.2lf\n%s = %.2lf\n%s = %.2lf\n%s = %.2lf\n%s = %.2lf\n\nЛучшие результаты у: %s\n"
-		, AtoW(vect[0].GetName()), k1, AtoW(vect[1].GetName()), k2, AtoW(vect[2].GetName()), k3, AtoW(vect[3].GetName()), k4, AtoW(vect[4].GetName()), k5, winner);
+		, (strings[0]), k1, (strings[1]), k2, (strings[2]), k3, (strings[3]), k4, (strings[4]), k5, winner);
 
 	MessageBox(strFormat);
 

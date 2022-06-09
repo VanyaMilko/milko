@@ -6,5 +6,5 @@ D:\MyProjects\C++\Курсачи 2.2\Бичурин\Client\Debug\Client.exe
 C:\Users\Алексей Лебедев\source\repos\бИЧУРИН курсач 4 сем\Client\Debug\Client.exe
 D:\MyProjects\C++\Курсачи 2.2\Милько\Client\Debug\Client.exe
 D:\БГУИР\Милько\Client\Debug\Client.exe
-D:\БГУИР\Милько\Client\Debug\Client.pdb
+D:\MyProjects\C++\Курсачи 2.2\Милько(2)\Милько\Client\Debug\Client.exe
 C:\Users\User\source\repos\milko\Client\Debug\Client.exe

@@ -28,7 +28,6 @@ void CAddDlg::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDC_EDIT_TYPE, m_editType);
 	DDX_Control(pDX, IDC_EDIT_1, m_edit1);
 	DDX_Control(pDX, IDC_EDIT_2, m_edit2);
-	DDX_Control(pDX, IDC_EDIT_MARK, m_editMark);
 	DDX_Control(pDX, IDC_STATIC_INCORRECT, m_wndIncorrect);
 }
 
@@ -42,9 +41,7 @@ BOOL CAddDlg::OnInitDialog()
 	m_editType.SetWindowText(bEdit ? AtoW(m_pObj->GetType()) : L"");
 	m_edit1.SetWindowText(bEdit ? DoubleToStr(m_pObj->GetCost()) : L"0");
 	m_edit2.SetWindowText(bEdit ? DoubleToStr(m_pObj->GetPower()) : L"0");
-	m_editMark.SetWindowText(bEdit ? DoubleToStr(m_pObj->GetMark()) : L"0.0");
 
-	m_editMark.EnableWindow(FALSE);
 
 	m_wndIncorrect.ShowWindow(SW_HIDE);
 
@@ -111,10 +108,6 @@ void CAddDlg::OnBnClickedOk()
 	m_edit2.GetWindowText(str);
 	if (str.IsEmpty() || _wtof(str) == 0) { m_wndIncorrect.ShowWindow(SW_SHOW); return; }
 	m_pObj->SetPower(_wtof(str));
-
-	m_editMark.GetWindowText(str);
-	if (str.IsEmpty()) { m_wndIncorrect.ShowWindow(SW_SHOW); return; }
-	m_pObj->SetMark(_wtof(str));
 
 	UpdateData(FALSE);
 

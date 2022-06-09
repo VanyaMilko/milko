@@ -31,6 +31,8 @@ protected:
 
 	std::vector<Car>& vect;
 
+	std::vector<CString> strings;
+
 	CStatic static1;
 	CStatic static2;
 	CStatic static3;
